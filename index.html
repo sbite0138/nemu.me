@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>nemu.me</title>
+</head>
+
+<body style="text-align: center;">
+    <h1 id="status"></h1>
+    <p id="comment"></p>
+    <details style="text-align: center;">
+        <summary style="opacity:0.5">ほかの眠さ</summary>
+        <a href="https://yaya.nemu.me/">やや</a>
+        <a href="https://yaya.nemu.me/">まあまあ</a>
+        <a href="https://kanari.nemu.me/">かなり</a>
+        <a href="https://tsuyoi.nemu.me/">強い</a>
+        <a href="https://fukai.nemu.me/">深い</a>
+    </details>
+</body>
+<script>
+    let drowsiness_level = '';
+    if (window.location.hostname === "localhost") {
+        drowsiness_level = window.location.search.substring(1);
+    } else if (window.location.hostname.endsWith('nemu.me')) {
+        drowsiness_level = window.location.hostname.split('.')[0];
+    } else {
+        drowsiness_level = 'error';
+    }
+    if (drowsiness_level === '') {
+        document.getElementById('status').innerHTML = 'nemu.me';
+        document.getElementById('comment').innerHTML = 'おやすみなさい';
+    } else if (drowsiness_level === 'yaya') {
+        document.getElementById('status').innerHTML = 'やや眠め';
+        document.getElementById('comment').innerHTML = 'もう少し起きててもいいかも';
+    } else if (drowsiness_level === 'maamaa') {
+        document.getElementById('status').innerHTML = 'まあまあ';
+        document.getElementById('comment').innerHTML = 'そろそろ寝てもいいかも';
+    } else if (drowsiness_level === 'kanari') {
+        document.getElementById('status').innerHTML = 'かなり眠め';
+        document.getElementById('comment').innerHTML = '布団から引力を感じる';
+    } else if (drowsiness_level === 'tuyoi' || drowsiness_level === 'tsuyoi') {
+        document.getElementById('status').innerHTML = '強い眠み';
+        document.getElementById('comment').innerHTML = '布団から動けません';
+    } else if (drowsiness_level === 'fukai' || drowsiness_level === 'hukai') {
+        document.getElementById('status').innerHTML = '深い眠み';
+        document.getElementById('comment').innerHTML = 'Zzz...';
+    } else {
+        document.getElementById('status').innerHTML = 'Error';
+        document.getElementById('comment').innerHTML = '一気に目が覚めた';
+    }
+</script>
+
+</body>
+
+</html>
