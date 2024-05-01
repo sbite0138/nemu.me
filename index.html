@@ -43,26 +43,26 @@
         drowsiness_level = 'error';
     }
     if (drowsiness_level === '') {
-        document.getElementById('status').innerHTML = 'nemu.me';
-        document.getElementById('comment').innerHTML = 'おやすみなさい';
+        document.getElementById('status').innerText = 'nemu.me';
+        document.getElementById('comment').innerText = 'おやすみなさい';
     } else if (drowsiness_level === 'yaya') {
-        document.getElementById('status').innerHTML = 'やや眠め';
-        document.getElementById('comment').innerHTML = 'もう少し起きててもいいかも';
+        document.getElementById('status').innerText = 'やや眠め';
+        document.getElementById('comment').innerText = 'もう少し起きててもいいかも';
     } else if (drowsiness_level === 'maamaa') {
-        document.getElementById('status').innerHTML = 'まあまあ眠め';
-        document.getElementById('comment').innerHTML = 'そろそろ寝てもいいかも';
+        document.getElementById('status').innerText = 'まあまあ眠め';
+        document.getElementById('comment').innerText = 'そろそろ寝てもいいかも';
     } else if (drowsiness_level === 'kanari') {
-        document.getElementById('status').innerHTML = 'かなり眠め';
-        document.getElementById('comment').innerHTML = '布団から引力を感じる';
+        document.getElementById('status').innerText = 'かなり眠め';
+        document.getElementById('comment').innerText = '布団から引力を感じる';
     } else if (drowsiness_level === 'tuyoi' || drowsiness_level === 'tsuyoi') {
-        document.getElementById('status').innerHTML = '強い眠み';
-        document.getElementById('comment').innerHTML = '布団から動けません';
+        document.getElementById('status').innerText = '強い眠み';
+        document.getElementById('comment').innerText = '布団から動けません';
     } else if (drowsiness_level === 'fukai' || drowsiness_level === 'hukai') {
-        document.getElementById('status').innerHTML = '深い眠み';
-        document.getElementById('comment').innerHTML = 'Zzz...';
+        document.getElementById('status').innerText = '深い眠み';
+        document.getElementById('comment').innerText = 'Zzz...';
     } else {
-        document.getElementById('status').innerHTML = 'Error';
-        document.getElementById('comment').innerHTML = '一気に目が覚めた';
+        document.getElementById('status').innerText = 'Error';
+        document.getElementById('comment').innerText = '一気に目が覚めた';
     }
 </script>
 
