@@ -5,17 +5,30 @@
     <title>nemu.me</title>
 </head>
 
-<body style="text-align: center;">
-    <h1 id="status"></h1>
-    <p id="comment"></p>
-    <details style="text-align: center;">
-        <summary style="opacity:0.5">ほかの眠さ</summary>
-        <a href="https://yaya.nemu.me/">やや</a>
-        <a href="https://maamaa.nemu.me/">まあまあ</a>
-        <a href="https://kanari.nemu.me/">かなり</a>
-        <a href="https://tsuyoi.nemu.me/">強い</a>
-        <a href="https://fukai.nemu.me/">深い</a>
-    </details>
+<body>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items:center ; margin-top: 10vh;">
+        <h1 style="font-size:2em;" id="status"></h1>
+        <p style="font-size:1em;" id="comment"></p>
+        <details open>
+            <summary style="opacity:0.5">ほかの眠さ</summary>
+            <div>
+                <a style="font-size:1rem;" href="https://yaya.nemu.me/">やや</a>
+            </div>
+            <div>
+                <a style="font-size:1rem;" href="https://maamaa.nemu.me/">まあまあ</a>
+            </div>
+            <div>
+                <a style="font-size:1rem;" href="https://kanari.nemu.me/">かなり</a>
+            </div>
+            <div>
+                <a style="font-size:1rem;" href="https://tsuyoi.nemu.me/">強い</a>
+            </div>
+            <div>
+                <a style="font-size:1rem;" href="https://fukai.nemu.me/">深い</a>
+            </div>
+        </details>
+    </div>
+
 </body>
 <script>
     let drowsiness_level = '';
